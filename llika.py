@@ -215,3 +215,7 @@ class Llika():
 
     def insertNode(self, g, instance, label="?"):
         insertNode(g, instance, label, self.global_colors)
+    def removeLastNode(self,g):
+        index = g.graph["index"]-1
+        g.remove_node(index)
+        g.graph["index"]=index
